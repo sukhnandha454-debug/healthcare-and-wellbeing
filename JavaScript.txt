@@ -1,0 +1,21 @@
+                                JavaScript
+
+function sendData() {
+  let mood = document.getElementById("mood").value;
+  let sleep = document.getElementById("sleep").value;
+  let stress = document.getElementById("stress").value;
+
+  fetch("/analyze", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      mood: mood,
+      sleep: sleep,
+      stress: stress
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("result").innerText = data.message;
+  });
+}
