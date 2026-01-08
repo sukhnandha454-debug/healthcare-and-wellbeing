@@ -1,0 +1,35 @@
+                           Stylish with CSS
+
+body {
+  font-family: Arial;
+  background: #e8f5f9;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+}
+
+label, select, input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0077b6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 15px;
+  font-weight: bold;
+}
