@@ -1,0 +1,28 @@
+                                     Python
+
+from flask import Flask, render_template, request, jsonify
+
+app = Flask(_name_)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+@app.route('/analyze', methods=['POST'])
+def analyze():
+    data = request.json
+    mood = data['mood']
+    sleep = int(data['sleep'])
+    stress = data['stress']
+
+    feedback = "You're doing okay 👍"
+
+    if sleep < 6:
+        feedback = "Try to get more sleep 😴"
+    if stress == "High":
+        feedback = "Take breaks and practice relaxation 🧘"
+
+    return jsonify({"message": feedback})
+
+if _name_ == '_main_':
+    app.run(host='0.0.0.0', port=81)
