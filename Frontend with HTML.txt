@@ -1,0 +1,38 @@
+                                    Frontend with HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wellbeing App</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🩺 Wellbeing Tracker</h1>
+
+    <label>Mood:</label>
+    <select id="mood">
+      <option>Happy</option>
+      <option>Okay</option>
+      <option>Sad</option>
+    </select>
+
+    <label>Sleep Hours:</label>
+    <input type="number" id="sleep">
+
+    <label>Stress Level:</label>
+    <select id="stress">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <button onclick="sendData()">Check Wellbeing</button>
+
+    <p id="result"></p>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
